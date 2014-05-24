@@ -1,0 +1,25 @@
+<apex:page showHeader="false" sidebar="false" standardStyleSheets="false" applyBodyTag="false" applyHtmlTag="false">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>{{ title }}</title>
+
+		<link href="{!URLFOR($Resource.{{ resource }}, 'lib.css')}" rel="stylesheet"> </link>
+		<link href="{!URLFOR($Resource.{{ resource }}, 'main.css')}" rel="stylesheet"> </link>
+
+		<script src="{!URLFOR($Resource.{{ resource }}, 'lib.js')}"></script>
+		<script src="{!URLFOR($Resource.{{ resource }}, 'templates.js')}"></script>
+		<script src="{!URLFOR($Resource.{{ resource}}, 'main.js')}"></script>
+	</head>
+
+
+	<body ng-app="{{ mainApp }}" animation="slide-left-right-ios7">
+		<ion-nav-bar class="bar-stable nav-title-slide-ios7">
+			<ion-nav-back-button class="button-icon icon ion-chevron-left">Back</ion-nav-back-button>
+		</ion-nav-bar>
+
+		<ion-nav-view></ion-nav-view>
+	</body>
+</html>
+</apex:page>
